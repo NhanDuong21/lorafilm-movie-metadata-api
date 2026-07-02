@@ -1,0 +1,18 @@
+{
+  "id": "e6a2ebfe-1234-4065-9856-11f81df6885e",
+  "name": "LoraFilm Local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8090",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "externalId",
+      "value": "299534",
+      "type": "default",
+      "enabled": true
+    }
+  ]
+}

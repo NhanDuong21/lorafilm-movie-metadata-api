@@ -1,0 +1,123 @@
+{
+    "info": {
+        "name": "LoraFilm Movie Metadata API",
+        "description": "API lấy dữ liệu phim từ TMDB",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/health",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "health"]
+                }
+            }
+        },
+        {
+            "name": "2. Search Movies",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/search?query=Avengers",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "search"],
+                    "query": [
+                        {"key": "query", "value": "Avengers"}
+                    ]
+                }
+            }
+        },
+        {
+            "name": "3. Get Movie Details",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/{{externalId}}",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "{{externalId}}"]
+                }
+            }
+        },
+        {
+            "name": "4. Get Movie Credits",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/{{externalId}}/credits",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "{{externalId}}", "credits"]
+                }
+            }
+        },
+        {
+            "name": "5. Get Movie Videos",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/{{externalId}}/videos",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "{{externalId}}", "videos"]
+                }
+            }
+        },
+        {
+            "name": "6. Get Movie Images",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/{{externalId}}/images",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "{{externalId}}", "images"]
+                }
+            }
+        },
+        {
+            "name": "7. Get Import Preview",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/{{externalId}}/import-preview",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "{{externalId}}", "import-preview"]
+                }
+            }
+        },
+        {
+            "name": "8. Invalid Query",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/search?query=a",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "search"],
+                    "query": [
+                        {"key": "query", "value": "a"}
+                    ]
+                }
+            }
+        },
+        {
+            "name": "9. Movie Not Found",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/movies/9999999999",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "v1", "movies", "9999999999"]
+                }
+            }
+        }
+    ]
+}
